@@ -1,19 +1,22 @@
 /*
-bubble sorting is used to arrange simple data by putting the largest number at first,
+bubble sorting is used to arrange simple data by putting the largest number at first
 the coding done by Hatim.
 */
-
 #include <iostream>
+#include<bits/stdc++.h> 
 void bubble_sort(float arr[], int); // bubble sorting prototype function
-void print_array(float arr[], int); // printing float array prototype function
+void array_input(float arr[], int); // printing float array prototype function
+void array_output(float arr[], int); // input data to array 
 
 int main()
 {
-	float numbers[] = {89.34, 98.345, 32.3, 53.6, 163.23, 4230.234, 120.1, 5434.98};
-	int NumSize = sizeof(numbers)/sizeof(float); // counting the array size
-	bubble_sort(numbers, NumSize); // calling the bubble sorting function
-	print_array(numbers, NumSize); // calling the print array function
-
+	float floatNumbers[20];	
+	int size; // counting the array size 
+	std::cout << "Enter how many numbers do you want to sort: ";
+	std::cin >> size;
+	array_input(floatNumbers,size);
+	bubble_sort(floatNumbers, size); // calling the bubble sorting function
+	array_output(floatNumbers, size); // calling the print array function
 }
 
 void bubble_sort(float arr[], int size)
@@ -29,13 +32,25 @@ void bubble_sort(float arr[], int size)
 				arr[j + 1] = temp; // second equal first
 			}
 		}
-	}
 
+
+
+	}
 }
 
-void print_array(float arr[], int size)
+void array_output(float arr[], int size)
 {
+	std::cout << "\nSorting done: ";
 	for(int i = 0; i < size; i++){
 		std::cout << arr[i] << " "; // loop over each element of the array and print it
+	}
+}
+
+void array_input(float arr[], int size)
+{
+	std::cout << "\nEnter " << size << " numbers";
+	for (int i = 0; i < size; i++)
+	{
+		std::cin >> arr[i];
 	}
 }
