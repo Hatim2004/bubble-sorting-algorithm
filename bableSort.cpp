@@ -32,6 +32,9 @@ void bubble_sort(float arr[], int size)
 				arr[j + 1] = temp; // second equal first
 			}
 		}
+
+
+
 	}
 }
 
@@ -45,7 +48,7 @@ void array_output(float arr[], int size)
 
 void array_input(float arr[], int size)
 {
-	std::cout << "\nEnter " << size << " numbers";
+	std::cout << "\nEnter " << size << " numbers: \n";
 	for (int i = 0; i < size; i++)
 	{
 		std::cin >> arr[i];
