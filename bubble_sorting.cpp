@@ -48,7 +48,7 @@ void array_output(float arr[], int size)
 
 void array_input(float arr[], int size)
 {
-	std::cout << "\nEnter " << size << " numbers";
+	std::cout << "\nEnter " << size << " numbers: ";
 	for (int i = 0; i < size; i++)
 	{
 		std::cin >> arr[i];
